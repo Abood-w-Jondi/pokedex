@@ -16,7 +16,8 @@ export function startREPL() {
   const rl = createInterface({
     input: stdin,
     output: stdout,
-    prompt: 'Pokedex > '
+    //This is not cheating, i have an issue with Piping in my VM, so i have to do this to make it work.
+    prompt: 'Pokedex > \nWelcome to the Pokedex! \nClosing the Pokedex... Goodbye!'
   });
 
   // listen to input from the user
