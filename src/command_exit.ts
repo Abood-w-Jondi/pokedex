@@ -1,8 +1,9 @@
 //@ts-ignore
-import process from 'node:process';
-//@ts-ignore
-import { stdout} from 'node:process';
-export function commandExit() {
+import process, { stdout } from 'node:process';
+import type { State } from './state.js';
+
+export async function commandExit(state: State) {
   stdout.write("Closing the Pokedex... Goodbye!\n");
+  state.rl.close();
   process.exit(0);
 }
