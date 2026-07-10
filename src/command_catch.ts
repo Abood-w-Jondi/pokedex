@@ -20,5 +20,6 @@ export async function commandCatch(state: State, ...args: string[]) {
   }
 
   stdout.write(`${pokemon.name} was caught!\n`);
+  stdout.write("You may now inspect it with the inspect command.\n");
   state.pokedex[pokemon.name] = pokemon;
 }
